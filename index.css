@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poiret+One&display=swap');
+/* font-family: "Poiret One", sans-serif;
+font-family: "Playfair Display", serif; */
+
+*{margin: 0; padding: 0; font-family: "Playfair Display", serif; box-sizing: border-box; color: #333;}
+li{list-style: none;}
+a{text-decoration: none; display: block;}
+img{display: block;}
+.hidden{display: none;}
+/* 모바일 ------------------------------------------------------------*/
+header{width: 80%; margin: auto; height: 50px; display: flex; justify-content: space-between; position: relative;}
+header h1 a{font-family: "Poiret One", sans-serif; font-size: 30px; margin-top: 5px; text-transform: uppercase;}
+header nav{position: absolute; top: 100%; width: 100%; display: none;}
+header nav ul li{padding: 15px; background: cornsilk; display: flex; justify-content: space-between;}
+header nav ul li span{text-indent: -9999px; background: url(./img/384-embed.png) no-repeat right; width: 20px; height: 20px; cursor: pointer;}
+header div{width: 25px; height: 20px; margin: 10px 10px 0 0; display: flex; flex-flow: wrap row; align-content: space-between;}
+header div .menutoggle{text-indent: -9999px; background: #000; width: 100%; height: 5px; display: block; cursor: pointer;}
+.sec1 img{width: 100%; max-width: 100%; background: coral;}
+.sec2{width: 80%; margin: auto; text-align: center;}
+.sec2 .intro{width: 80%; margin: 50px auto;}
+.sec2 .intro h3{margin-bottom: 10px; font-size: 1.563em;}
+.sec2 h3{text-transform: uppercase;}
+.sec2 .intro p{font-size: 0.938em;}
+.sec2 .box1 ul li{margin-bottom: 50px;}
+.sec2 .box1 ul li a img{margin: auto;}
+.sec2 .box1 ul li a h3{font-size: 0.875em; font-weight: normal; margin: 10px 0;}
+.sec2 p{font-size: 0.813em;}
+hr{width: 80%; margin: 50px auto; border: 1px solid #ddd;}
+.sec3 h3{text-align: center; text-transform: uppercase; margin: 50px 0 30px; font-size: 1.563em;}
+.sec3 ul li a{width: 100%; height: 100%; position: relative;}
+.sec3 ul li a::before{content: ""; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: violet; opacity: 0;}
+.sec3 ul li a:hover::before{opacity: 0.5;}
+.sec3 ul li a div{position: absolute; top: 0; left: 20px; opacity: 0;}
+.sec3 ul li a div p{color: #fff;}
+.sec3 ul li a:hover div{transform: translateY(30px); transition: all 0.3s; opacity: 1;}
+.sec3 ul li a img{width: 100%; max-width: 100%;}
+.sec4{width: 80%; margin: auto;}
+.sec4 .box2 h3{text-align: center; text-transform: uppercase; margin: 50px 0 30px; font-size: 1.563em;}
+.sec4 .box2 ul li{margin-bottom: 30px;}
+.sec4 .box2 ul li a img{width: 100%; max-width: 100%;}
+.sec4 .box2 ul li a time{font-size: 0.688em;}
+.sec4 .box2 ul li a p{font-size: 0.875em;}
+.sec4 .box3 h3{text-align: center; text-transform: uppercase; margin: 50px 0 30px; font-size: 1.563em;}
+.sec4 .box3 form{position: relative;}
+.sec4 .box3 form fieldset{border: 0;}
+.sec4 .box3 form fieldset .contactbox1{display: flex; flex-flow: nowrap column;}
+.sec4 .box3 form fieldset .contactbox1 input{margin-bottom: 20px; border: 0; padding: 5px; border-bottom: 1px solid #333;}
+.sec4 .box3 form fieldset .contactbox2 textarea{width: 100%; height: 150px; border: 0; resize: none; padding: 5px; border-bottom: 1px solid #333;}
+.sec4 .box3 form button{position: absolute; right: 0; padding: 10px; text-transform: uppercase; border: 0; background: violet; color: #fff; cursor: pointer;}
+footer{width: 100%; margin-top: 50px; display: flex; align-items: center; background: rgb(97, 49, 97); height: 150px;}
+footer .img{width: 20%; height: 100%;}
+footer .img img{width: 100%; height: 100%; object-fit: cover;}
+footer div:last-child{width: 80%; height: 100%; display: flex; flex-direction: column; justify-content: center; padding-left: 30px;}
+footer div .address{margin: 20px 0 0;}
+footer div .address address{font-style: normal; font-size: 0.813em; color: #fff; line-height: 1.4;}
+footer div .copy p{font-size: 0.688em; color: #fff; text-align: left;}
+/* 태블릿 ------------------------------------------------------------*/
+@media all and (min-width : 768px){
+  header nav{display: block; top: 0; margin-top: 10px;}
+  header nav ul{display: flex; justify-content: flex-end;}
+  header nav ul li{background: none; padding: 0;}
+  header nav ul li span{background: none;}
+  header div{display: none;}
+  .sec2 .intro{display: flex; justify-content: center; align-items: center; text-align: center; margin-bottom: 80px;}
+  .sec2 .intro h3{margin: 0 40px 0 0;}
+  .sec2 .intro p{text-align: left;}
+  .sec2 .box1 ul{display: flex; justify-content: space-between;}
+  .sec2 .box1 ul li{width: 20%;}
+  .sec3 ul{display: flex; flex-flow: row wrap; margin-bottom: 50px;}
+  .sec3 ul li{width: 50%;}
+  .sec4 .box2 ul{display: flex; justify-content: space-between;}
+  .sec4 .box2 ul li{width: 30%;}
+  .sec4 .box3 form fieldset{display: flex; justify-content: space-between;}
+  .sec4 .box3 form fieldset div{width: 48%;}
+
+  .sec4 .box3 form fieldset .contactbox2 textarea{height: 125px;}
+  footer div .address{margin-top: 40px;}
+}
+/* PC ---------------------------------------------------------------*/
+@media all and (min-width : 960px){
+  .sec3 ul li{width: 25%;}
+  footer div:last-child{padding-left: 50px;}
+  .sec4{margin-top: 50px;}
+  .sec4 .box2{display: flex; justify-content: center;}
+  .sec4 .box2 h3{margin: 0 50px 0 0;}
+}
